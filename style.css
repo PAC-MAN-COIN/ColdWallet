@@ -1,0 +1,362 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    background-color: #111;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Navbar Styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 0px 5%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.navbar .logo img {
+    width: 75px;
+}
+
+.navbar .nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.navbar .nav-links li {
+    margin: 0 15px;
+}
+
+.navbar .nav-links a {
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.navbar .nav-links a:hover {
+    color: #00B4FF;
+}
+
+/* Countdown Timer Section */
+#countdown {
+    position: absolute;
+    top: 145%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0);
+    padding: 20px 0;
+    text-align: center;
+    color: #fff;
+    width: 100%;
+    z-index: 99;
+}
+
+.countdown-text {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.timer {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #00B4FF;
+}
+
+/* Hero Section */
+#hero {
+    background-image: url('hero-background.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    padding: 20px;
+}
+
+#hero .overlay {
+    background: rgba(0, 0, 0, 0);
+    padding: 50px;
+    border-radius: 10px;
+}
+
+#hero .title {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #00B4FF;
+}
+
+#hero .subtitle {
+    font-size: 1.6rem;
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+
+.cta-btn {
+    padding: 15px 35px;
+    background-color: #00B4FF;
+    color: white;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.cta-btn:hover {
+    background-color: #0088cc;
+}
+
+/* About Section */
+#about {
+    padding: 80px 0;
+    background-color: #222;
+    text-align: center;
+}
+
+#about .section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.description {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+/* Contract Address Styling */
+.contract-address {
+    font-weight: bold;
+    color: #00B4FF;
+    margin-top: 70px;
+    font-size: 1.2rem;
+    display: block;
+    text-align: center;
+    margin-bottom: 70px;
+    word-wrap: break-word;
+    max-width: 100%;
+    padding: 0 10px;
+}
+
+/* Trailer Section */
+#trailer {
+    padding: 80px 0;
+    background-color: #111;
+    text-align: center;
+}
+
+#trailer .section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 800px;
+    border-radius: 10px;
+}
+
+/* Beast Game Section */
+#beast-game {
+    padding: 80px 0;
+    background-color: #111;
+    text-align: center;
+}
+
+#beast-game .section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.game-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #222;
+    border-radius: 10px;
+    padding: 30px;
+    color: #ccc;
+    min-height: 400px; /* Adjust height as needed */
+}
+
+.game-placeholder {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #00B4FF;
+}
+#beast-game .description {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #ccc;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Livestream Section */
+#livestream {
+    padding: 80px 0;
+    background-color: #111;
+    text-align: center;
+}
+
+#livestream .section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.livestream-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #222;
+    border-radius: 10px;
+    padding: 30px;
+    color: #ccc;
+}
+
+.livestream-placeholder {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #00B4FF;
+}
+
+/* Social Links Section */
+#socials {
+    background-color: #222;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.social-link {
+    display: inline-block;
+    margin: 0 20px;
+    padding: 15px 25px;
+    background-color: #1da1f2;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.social-link:hover {
+    transform: scale(1.1);
+    background-color: #007bb5;
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    padding: 40px 0;
+    text-align: center;
+    font-size: 1rem;
+}
+
+footer a {
+    color: #00B4FF;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #0088cc;
+}
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 10px 5%;
+    }
+
+    .navbar .logo img {
+        width: 80px;
+    }
+
+    .navbar .nav-links {
+        justify-content: center;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    #countdown {
+        padding: 5px 0;
+		    top: 175%;
+    }
+
+
+    .navbar .nav-links li {
+        margin: 0 10px;
+    }
+
+    .navbar .nav-links a {
+        font-size: 0.9rem;
+    }
+
+    #hero .title {
+        font-size: 3rem;
+    }
+
+    #hero .subtitle {
+        font-size: 1.4rem;
+    }
+
+    .cta-btn {
+        padding: 12px 30px;
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar .nav-links a {
+        font-size: 0.8rem;
+    }
+
+    .navbar .nav-links li {
+        margin: 0 8px;
+    }
+
+    #hero .title {
+        font-size: 2.5rem;
+    }
+
+    #hero .subtitle {
+        font-size: 1.2rem;
+    }
+
+    .cta-btn {
+        padding: 10px 25px;
+        font-size: 1rem;
+    }
+}
