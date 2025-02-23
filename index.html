@@ -37,6 +37,7 @@
                 <p class="subtitle">Join the revolution. Own the meme. Watch the movie.</p>
                 <a href="https://dexscreener.com/solana/wkds1k8d7mkodhxpszkksippxvjjjsfsbwyq2vfp3yr" class="cta-btn" target="_blank">Get the Coin</a>
             </div>
+            <canvas id="particle-canvas" class="particle-canvas"></canvas>
         </section>
 
         <section id="countdown">
@@ -92,6 +93,7 @@
         </div>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
     <script>
         // Preloader
         window.onload = () => document.getElementById('preloader').style.display = 'none';
@@ -128,6 +130,55 @@
                 document.querySelector(this.getAttribute('href')).scrollIntoView({
                     behavior: 'smooth'
                 });
+            });
+        });
+
+        // Particle Animation (Three.js)
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('particle-canvas'), alpha: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.getElementById('hero').appendChild(renderer.domElement);
+
+        const particles = [];
+        const particleCount = 150;
+
+        for (let i = 0; i < particleCount; i++) {
+            const particle = new THREE.Vector3(
+                Math.random() * 2000 - 1000,
+                Math.random() * 2000 - 1000,
+                Math.random() * 2000 - 1000
+            );
+            particles.push(particle);
+        }
+
+        camera.position.z = 1000;
+
+        function animate() {
+            requestAnimationFrame(animate);
+
+            particles.forEach(particle => {
+                particle.x += Math.sin(Date.now() * 0.001 + particle.x) * 0.05;
+                particle.y += Math.cos(Date.now() * 0.001 + particle.y) * 0.05;
+                particle.z += Math.sin(Date.now() * 0.001 + particle.z) * 0.05;
+            });
+
+            renderer.render(scene, camera);
+        }
+
+        animate();
+
+        window.addEventListener('resize', () => {
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+        });
+
+        // Parallax Scrolling
+        document.addEventListener('scroll', () => {
+            const scrollY = window.scrollY;
+            document.querySelectorAll('.parallax').forEach(element => {
+                element.style.transform = `translateY(${scrollY * 0.3}px)`;
             });
         });
     </script>
