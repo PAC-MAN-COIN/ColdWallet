@@ -4,114 +4,132 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coldwallet Solana</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Coldwallet: The memecoin inspired by the upcoming crypto heist movie. Join the revolution!">
+    <meta name="keywords" content="Coldwallet, memecoin, Solana, crypto, movie">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="logo.png">
 </head>
 <body>
-    <!-- Navigation Bar -->
+    <div id="preloader" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #111; z-index: 9999; display: flex; align-items: center; justify-content: center;">
+        <div class="loader"></div>
+    </div>
+
     <header>
         <nav class="navbar">
             <div class="logo">
                 <img src="logo.png" alt="Coldwallet Logo">
             </div>
+            <button class="menu-toggle" aria-label="Toggle menu">☰</button>
             <ul class="nav-links">
                 <li><a href="https://t.me/NewCryptoMovie" target="_blank">Telegram</a></li>
                 <li><a href="https://x.com/mashable/status/1880306681239712089" target="_blank">X</a></li>
-                <li><a href="#trailer">Trailer</a></li>>
+                <li><a href="#trailer">Trailer</a></li>
                 <li><a href="#socials">Socials</a></li>
             </ul>
         </nav>
     </header>
-    <!-- Countdown Timer Section -->
-    <section id="countdown">
-        <div class="container">
-            <p class="countdown-text"><b>Time remaining until Movie</b></p>
-            <div id="timer" class="timer"><b></b></div>
-        </div>
-    </section>
-    <!-- Parallax Hero Section -->
-    <section id="hero">
-        <div class="overlay">
 
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about">
-        <div class="container">
-            <h2 class="section-title">What is Coldwallet?</h2>
-            <p class="description">After losing everything in a cryptocurrency scam, a ragtag team of vigilante Redditors attempt to kidnap the kingpin who screwed them over. But when the home invasion takes a turn for the worst, they become victims in a sadistic game.</p>
-            <a href="https://dexscreener.com/solana/wkds1k8d7mkodhxpszkksippxvjjjsfsbwyq2vfp3yr" class="contract-address" target="_blank">
-                CA: 9vgPpytQBCcxEUo68bEH7rc2XoEJaq4K5YVVc7WKpump
-            </a>
-        </div>
-    </section>
-
-    <!-- Trailer Section -->
-    <section id="trailer">
-        <div class="container">
-            <h2 class="section-title">Watch the Trailer</h2>
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/Rv668hG9UnY" frameborder="0" allowfullscreen></iframe>
+    <main>
+        <section id="hero">
+            <div class="overlay">
+                <h1 class="title">Coldwallet: The Crypto Heist</h1>
+                <p class="subtitle">Join the revolution. Own the meme. Watch the movie.</p>
+                <a href="https://dexscreener.com/solana/wkds1k8d7mkodhxpszkksippxvjjjsfsbwyq2vfp3yr" class="cta-btn" target="_blank">Get the Coin</a>
             </div>
-        </div>
-    </section>
-    <!-- Livestream Section -->
-    <section id="livestream">
-        <div class="container">
-            <h2 class="section-title">Livestream</h2>
-            <div class="livestream-container">
-                <div class="livestream-placeholder">
-                    <p>Coming Soon! Stay tuned for the live broadcast.</p>
+        </section>
+
+        <section id="countdown">
+            <div class="container">
+                <p class="countdown-text">Time Until Movie Release</p>
+                <div id="timer" class="timer"></div>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="container">
+                <h2 class="section-title">What is Coldwallet?</h2>
+                <p class="description">After losing everything in a cryptocurrency scam, a ragtag team of vigilante Redditors attempt to kidnap the kingpin who screwed them over. But when the home invasion takes a turn for the worst, they become victims in a sadistic game.</p>
+                <a href="https://dexscreener.com/solana/wkds1k8d7mkodhxpszkksippxvjjjsfsbwyq2vfp3yr" class="contract-address" target="_blank">
+                    CA: 9vgPpytQBCcxEUo68bEH7rc2XoEJaq4K5YVVc7WKpump
+                </a>
+            </div>
+        </section>
+
+        <section id="trailer">
+            <div class="container">
+                <h2 class="section-title">Watch the Trailer</h2>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/Rv668hG9UnY" frameborder="0" allowfullscreen></iframe>
                 </div>
             </div>
-        </div>
-    </section>
-	
+        </section>
 
+        <section id="livestream">
+            <div class="container">
+                <h2 class="section-title">Livestream</h2>
+                <div class="livestream-container">
+                    <div class="livestream-placeholder">
+                        <p>Coming Soon! Stay tuned for the live broadcast.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <section id="socials">
+            <div class="container">
+                <a href="https://x.com/mashable/status/1880306681239712089" class="social-link" target="_blank">X</a>
+                <a href="https://t.me/NewCryptoMovie" class="social-link" target="_blank">Telegram</a>
+                <a href="https://dexscreener.com/solana/wkds1k8d7mkodhxpszkksippxvjjjsfsbwyq2vfp3yr" class="social-link" target="_blank">Track Coin</a>
+            </div>
+        </section>
+    </main>
 
-    <!-- Social Links Section -->
-    <section id="socials">
-        <div class="container">
-            <a href="https://x.com/mashable/status/1880306681239712089" class="social-link" target="_blank">X</a>
-            <a href="https://t.me/NewCryptoMovie" class="social-link" target="_blank">Telegram</a>
-            <a href="https://dexscreener.com/solana/wkds1k8d7mkodhxpszkksippxvjjjsfsbwyq2vfp3yr" class="social-link" target="_blank">Track Coin</a>
-        </div>
-    </section>
-
-    <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2025 Coldwallet. All Rights Reserved.</p>
+            <p>© 2025 Coldwallet. All Rights Reserved.</p>
             <p><a href="/privacy-policy" target="_blank">Privacy Policy</a> | <a href="/terms" target="_blank">Terms of Service</a></p>
         </div>
     </footer>
+
     <script>
-        // Set the target date for the countdown
+        // Preloader
+        window.onload = () => document.getElementById('preloader').style.display = 'none';
+
+        // Mobile Menu Toggle
+        document.querySelector('.menu-toggle').addEventListener('click', () => {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+
+        // Countdown Timer
         var targetDate = new Date("February 28, 2025 00:00:00").getTime();
 
-        // Update the countdown every second
         var countdown = setInterval(function() {
             var now = new Date().getTime();
             var timeLeft = targetDate - now;
 
-            // Calculate days, hours, minutes, and seconds
             var days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
             var hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
             var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
-            // Display the result in the element with id="timer"
-            document.getElementById("timer").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+            document.getElementById("timer").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s";
 
-            // If the countdown finishes
             if (timeLeft < 0) {
                 clearInterval(countdown);
                 document.getElementById("timer").innerHTML = "EXPIRED";
             }
         }, 1000);
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
     </script>
 </body>
 </html>
